@@ -1,0 +1,4 @@
+---
+
+- src: git+https://github.com/momokeith/ansible-role-php7
+  name: kfina.php7
