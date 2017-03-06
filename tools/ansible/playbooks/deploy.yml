@@ -12,16 +12,15 @@
 
     - name: Checkout project
       git:
-        dest: /tmp
+        dest: /var/www/bewamo/12345
         repo: https://github.com/momokeith/bewamo.git
         version: develop
 
-    - name: move project
-      copy:
-       remote_src: True
-       src: /tmp/bewamo
-       dest: /var/www/bewamo/12345
-
+#    - name: move project
+#      copy:
+#       remote_src: True
+#       src: /tmp/bewamo
+#       dest: /var/www/bewamo/12345
     - name: Create link
       file:
        path: /var/www/bewamo/current
