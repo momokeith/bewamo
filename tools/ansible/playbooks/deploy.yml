@@ -22,7 +22,7 @@
         chdir: /tmp/bewamo
       register: commit_hash
 
-    - name: Copy to www
+    - name: Deploying
       command: mv /tmp/bewamo /var/www/bewamo/{{ commit_hash.stdout }}
 
     - name: Create link
