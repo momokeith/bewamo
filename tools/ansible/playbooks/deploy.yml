@@ -23,7 +23,7 @@
       register: commit_hash
 
     - name: Copy to www
-      copy: git rev-parse HEAD
+      copy:
         remote_src: True
         src: /tmp/bewamo
         dest: /var/www/bewamo/{{ commit_hash.stdout }}
