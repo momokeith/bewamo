@@ -12,13 +12,25 @@
 
     - name: Checkout project
       git:
-        dest: /var/www/bewamo/12345
+        dest: /tmp/bewamo
         repo: https://github.com/momokeith/bewamo.git
         version: develop
+
+    - name: Get last commit hash
+      command: git rev-parse HEAD
+      args:
+        chdir: /tmp/bewamo
+      register: commit_hash
+
+    - name: Copy to www
+      copy: git rev-parse HEAD
+        remote_src: True
+        src: /tmp/bewamo
+        dest: /var/www/bewamo/{{ commit_hash.stdout }}
 
     - name: Create link
       file:
        path: /var/www/bewamo/current
-       src: /var/www/bewamo/12345
+       src: /var/www/bewamo/{{ commit_hash.stdout }}
        state: link
        mode: 0755
