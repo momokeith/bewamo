@@ -5,3 +5,6 @@
 
 - src: git+https://github.com/momokeith/ansible-role-git
   name: kfina.git
+
+- src: git+https://github.com/momokeith/ansible-role-php-composer.git
+  name: kfina.php.composer

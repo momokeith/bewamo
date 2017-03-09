@@ -25,6 +25,11 @@
     - name: Deploying
       command: mv /tmp/bewamo /var/www/bewamo/{{ commit_hash.stdout }}
 
+    - name: Running tests
+      command: bin/phpspec r
+      args:
+        chdir: /var/www/bewamo/{{ commit_hash.stdout }}
+
     - name: Create link
       file:
        path: /var/www/bewamo/current

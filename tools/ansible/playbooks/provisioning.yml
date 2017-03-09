@@ -6,3 +6,4 @@
   roles:
     - kfina.php7
     - kfina.git
+    - kfina.php.composer

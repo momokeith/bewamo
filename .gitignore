@@ -1,3 +1,5 @@
 tools/ansible/playbooks/roles
 tools/vagrant/.vagrant
 .idea
+
+/vendor/
