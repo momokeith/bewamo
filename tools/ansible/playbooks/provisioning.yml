@@ -4,6 +4,5 @@
   become: true
 
   roles:
-    - kfina.php7
-    - kfina.git
-    - kfina.php.composer
+    - kfina.roles/php7
+    - kfina.roles/git

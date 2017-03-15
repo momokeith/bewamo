@@ -3,3 +3,4 @@ tools/vagrant/.vagrant
 .idea
 
 /vendor/
+/bin/
