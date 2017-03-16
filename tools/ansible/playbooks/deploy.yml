@@ -45,7 +45,6 @@
        mode: "u+rwx,g-wx,o-rwx"
        owner: www-data
        group: www-data
-       recurse: yes
 
     - name: Create link
       file:
