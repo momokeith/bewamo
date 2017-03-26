@@ -7,3 +7,4 @@
     - kfina.roles/php7
     - kfina.roles/git
     - kfina.roles/composer
+    - kfina.roles/ant
