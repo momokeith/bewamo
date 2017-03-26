@@ -1,0 +1,6 @@
+---
+
+git_repo: https://github.com/momokeith/bewamo.git
+project_name: bewamo
+build_commands:
+  -
