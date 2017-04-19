@@ -1,7 +1,0 @@
----
-
-- hosts: all
-  become: true
-
-  roles:
-    - kfina.roles/deployment/web
