@@ -1,0 +1,9 @@
+---
+vm:
+  hostname: bewamo.local
+  network:
+    ip: 192.168.50.6
+  synced_folder: /vagrant
+  provider:
+    name: Bewamo
+    memory: 1024

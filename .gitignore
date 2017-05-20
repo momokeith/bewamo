@@ -4,3 +4,4 @@ tools/vagrant/.vagrant
 
 /vendor/
 /bin/
+*.retry

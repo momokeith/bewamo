@@ -8,3 +8,4 @@
     - kfina.roles/git
     - kfina.roles/composer
     - kfina.roles/ant
+    - geerlingguy.mysql
