@@ -1,0 +1,8 @@
+[30-May-2017 13:40:18 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in /Users/mohamed.keita/Projects/Personal/bewamo/config/di/zend/services/doctrine.php on line 8
+[30-May-2017 14:41:43 UTC] PHP Fatal error:  Declaration of Kfina\Bewamo\User\Service\UserService::create(Kfina\Bewamo\UserInterface $user) must be compatible with Kfina\Bewamo\User\Service\UserServiceInterface::create(Kfina\Bewamo\User\Entity\UserInterface $user) in /Users/mohamed.keita/Projects/Personal/bewamo/src/User/Service/UserService.php on line 8
+[30-May-2017 15:02:48 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/mohamed.keita/Projects/Personal/bewamo/src/User/Repository/DoctrineRepository.php on line 36
+[30-May-2017 15:02:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/mohamed.keita/Projects/Personal/bewamo/src/User/Repository/DoctrineRepository.php on line 36
+[30-May-2017 15:02:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/mohamed.keita/Projects/Personal/bewamo/src/User/Repository/DoctrineRepository.php on line 36
+[30-May-2017 15:02:51 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/mohamed.keita/Projects/Personal/bewamo/src/User/Repository/DoctrineRepository.php on line 36
+[30-May-2017 16:09:24 UTC] PHP Fatal error:  Interface function Kfina\Bewamo\Shop\Entity\ShopInterface::addUser() cannot contain body in /Users/mohamed.keita/Projects/Personal/bewamo/src/Shop/Entity/ShopInterface.php on line 12
+[30-May-2017 16:09:41 UTC] PHP Fatal error:  Interface function Kfina\Bewamo\Shop\Entity\ShopInterface::addUser() cannot contain body in /Users/mohamed.keita/Projects/Personal/bewamo/src/Shop/Entity/ShopInterface.php on line 12

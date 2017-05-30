@@ -1,0 +1,12 @@
+default:
+  suites:
+    shop:
+      paths: ['features/shop/']
+      contexts:
+        - Kfina\Bewamo\Test\Shop\Domain\ShopDomainContext
+e2e:
+  suites:
+    shop:
+      paths: ['features/shop/']
+      contexts:
+        - Kfina\Bewamo\Test\Shop\End2End\ShopE2EContext
