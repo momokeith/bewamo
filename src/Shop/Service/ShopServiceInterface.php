@@ -19,4 +19,11 @@ interface ShopServiceInterface
      * @return ShopInterface
      */
     public function create(ShopInterface $shop);
+
+    /**
+     * @param string $name
+     *
+     * @return ShopInterface[]
+     */
+    public function findShopWithName(string $name);
 }

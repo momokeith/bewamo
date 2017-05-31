@@ -12,4 +12,9 @@ interface ShopInterface
      * @param UserInterface $user
      */
     public function addUser(UserInterface $user);
+
+    /**
+     * @return string
+     */
+    public function getName():string;
 }

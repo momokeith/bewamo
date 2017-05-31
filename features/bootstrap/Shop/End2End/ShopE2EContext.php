@@ -3,8 +3,8 @@
 namespace Kfina\Bewamo\Test\Shop\End2End;
 
 use Behat\Behat\Context\Context;
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Gherkin\Node\TableNode;
+use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
 use Kfina\Bewamo\Shop\Entity\Shop;
 use Kfina\Bewamo\Shop\Entity\ShopInterface;
@@ -13,6 +13,8 @@ use Kfina\Bewamo\User\Entity\User;
 use Kfina\Bewamo\User\Entity\UserInterface;
 use Kfina\Bewamo\User\Service\UserServiceInterface;
 use Zend\ServiceManager\ServiceManager;
+use Doctrine\ORM\Tools\SchemaTool;
+use PHPUnit\Framework\Assert;
 
 /**
  * Defines application features from the specific context.
@@ -89,10 +91,35 @@ class ShopE2EContext implements Context
     }
 
     /**
-     * @Then A shop with the name :arg1 should exist
+     * @Then A shop with the name :shopName should exist
      */
-    public function aShopWithTheNameShouldExist($arg1)
+    public function aShopWithTheNameShouldExist($shopName)
     {
-        throw new PendingException();
+        /** @var $shopService ShopServiceInterface */
+        $shopService = $this->container->get(ShopServiceInterface::class);
+
+        $shops = $shopService->findShopWithName($shopName);
+
+        $result = array_filter($shops,function(ShopInterface $shop) use ($shopName){
+            return $shop->getName() == $shopName;
+        });
+
+        Assert::assertTrue(count($result) > 0 );
+
+    }
+
+    /**
+     * @BeforeScenario
+     */
+    public function prepareDatabase()
+    {
+        /** @var $entityManager EntityManager */
+        $entityManager = $this->container->get(EntityManager::class);
+
+        $metaData = $entityManager->getMetadataFactory()->getAllMetadata();
+
+        $tool = new SchemaTool($entityManager);
+        $tool->dropSchema();
+        $tool->createSchema();
     }
 }

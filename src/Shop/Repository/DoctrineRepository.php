@@ -27,4 +27,14 @@ class DoctrineRepository extends EntityRepository implements RepositoryInterface
 
         return $shop;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findByName(string $name)
+    {
+       return $this->findBy(['name' => $name]);
+    }
+
+
 }

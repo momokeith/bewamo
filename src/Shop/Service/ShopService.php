@@ -40,4 +40,12 @@ class ShopService implements ShopServiceInterface
     {
         return $this->shopRepository->create($shop);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findShopWithName(string $name)
+    {
+        return $this->shopRepository->findByName($name);
+    }
 }

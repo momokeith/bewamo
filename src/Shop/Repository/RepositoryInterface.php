@@ -19,4 +19,11 @@ interface RepositoryInterface
      * @return ShopInterface
      */
     public function create(ShopInterface $shop);
+
+    /**
+     * @param string $name
+     *
+     * @return array
+     */
+    public function findByName(string $name);
 }

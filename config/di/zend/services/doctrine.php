@@ -3,6 +3,7 @@
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
+use Doctrine\ORM\Tools\SchemaTool;
 
 return [
     'factories' => [
@@ -16,5 +17,14 @@ return [
 
             return EntityManager::create($globalConfig['db'], $metadataConfig);
         },
+
+        SchemaTool::class => function (ContainerInterface $container, $requestedName) {
+            $entityManager = $container->get(EntityManager::class);
+            return new SchemaTool($entityManager);
+        },
+
+        ''
     ],
+
+
 ];
