@@ -39,6 +39,6 @@ class DoctrineRepository extends EntityRepository implements RepositoryInterface
      */
     public function findAll()
     {
-        return $this->findAll();
+        return parent::findAll();
     }
 }
