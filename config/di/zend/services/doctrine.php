@@ -22,8 +22,6 @@ return [
             $entityManager = $container->get(EntityManager::class);
             return new SchemaTool($entityManager);
         },
-
-        ''
     ],
 
 

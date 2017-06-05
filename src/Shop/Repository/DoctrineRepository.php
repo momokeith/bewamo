@@ -2,13 +2,11 @@
 
 namespace Kfina\Bewamo\Shop\Repository;
 
-use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityRepository;
 use Kfina\Bewamo\Shop\Entity\ShopInterface;
 
 class DoctrineRepository extends EntityRepository implements RepositoryInterface
 {
-
     /**
      * {@inheritdoc}
      */
@@ -33,8 +31,14 @@ class DoctrineRepository extends EntityRepository implements RepositoryInterface
      */
     public function findByName(string $name)
     {
-       return $this->findBy(['name' => $name]);
+        return $this->findBy(['name' => $name]);
     }
 
-
+    /**
+     * {@inheritdoc}
+     */
+    public function findAll()
+    {
+        return $this->findAll();
+    }
 }

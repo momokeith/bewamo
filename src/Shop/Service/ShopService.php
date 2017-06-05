@@ -17,13 +17,13 @@ class ShopService implements ShopServiceInterface
 
     /**
      * ShopService constructor.
+     *
      * @param RepositoryInterface $shopRepository
      */
     public function __construct(RepositoryInterface $shopRepository)
     {
         $this->shopRepository = $shopRepository;
     }
-
 
     /**
      * {@inheritdoc}
@@ -47,5 +47,13 @@ class ShopService implements ShopServiceInterface
     public function findShopWithName(string $name)
     {
         return $this->shopRepository->findByName($name);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findAll()
+    {
+        return $this->shopRepository->findAll();
     }
 }

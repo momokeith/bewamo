@@ -3,10 +3,10 @@
 return array(
     'db' => array(
         'driver' => 'pdo_mysql',
-        'user' => 'bewamo',
-        'password' => 'bewamo',
-        'dbname' => 'bewamo',
-        'host' => '192.168.50.6',
+        'user' => 'bewamo_test',
+        'password' => 'CS3dnC?$A4\uh@&(',
+        'dbname' => 'bewamo_test',
+        'host' => 'localhost',
     ),
     'doctrine' => [
         'metadata' => [

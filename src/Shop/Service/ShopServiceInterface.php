@@ -26,4 +26,10 @@ interface ShopServiceInterface
      * @return ShopInterface[]
      */
     public function findShopWithName(string $name);
+
+
+    /**
+     * @return ShopInterface[]
+     */
+    public function findAll();
 }

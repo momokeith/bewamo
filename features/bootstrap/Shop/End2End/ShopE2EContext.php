@@ -115,11 +115,11 @@ class ShopE2EContext implements Context
     {
         /** @var $entityManager EntityManager */
         $entityManager = $this->container->get(EntityManager::class);
+        $tool = $this->container->get(SchemaTool::class);
 
         $metaData = $entityManager->getMetadataFactory()->getAllMetadata();
 
-        $tool = new SchemaTool($entityManager);
-        $tool->dropSchema();
-        $tool->createSchema();
+        $tool->dropSchema($metaData);
+        $tool->createSchema($metaData);
     }
 }

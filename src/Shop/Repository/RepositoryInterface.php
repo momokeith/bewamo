@@ -26,4 +26,9 @@ interface RepositoryInterface
      * @return array
      */
     public function findByName(string $name);
+
+    /**
+     * @return array
+     */
+    public function findAll();
 }
