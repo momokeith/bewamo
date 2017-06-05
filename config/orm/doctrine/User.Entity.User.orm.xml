@@ -1,0 +1,24 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                    http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="Kfina\Bewamo\User\Entity\User" table="users">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="firstName" type="string" />
+
+        <many-to-many field="shops" inversed-by="users" target-entity="Kfina\Bewamo\Shop\Entity\Shop">
+            <join-table name="users_shops">
+                <join-columns>
+                    <join-column name="userId" referenced-column-name="id" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="shopId" referenced-column-name="id" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+    </entity>
+</doctrine-mapping>
