@@ -17,6 +17,11 @@ class User implements UserInterface
     private $firstName;
 
     /**
+     * @var string
+     */
+    private $lastName;
+
+    /**
      * @var ShopInterface[]
      */
     private $shops;
@@ -71,6 +76,22 @@ class User implements UserInterface
     public function setFirstName(string $firstName)
     {
         $this->firstName = $firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     */
+    public function setLastName(string $lastName)
+    {
+        $this->lastName = $lastName;
     }
 
     /**
