@@ -68,7 +68,7 @@ class Shop implements ShopInterface
     /**
      * @return UserInterface[]
      */
-    public function getUsers(): array
+    public function getUsers()
     {
         return $this->users;
     }
