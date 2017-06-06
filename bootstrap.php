@@ -8,7 +8,7 @@ use Doctrine\ORM\EntityManager;
 $dbParams = array(
     'driver' => 'pdo_mysql',
     'user' => 'bewamo_test',
-    'password' => 'CS3dnC?$A4\uh@&(',
+    'password' => 'bewamo_test',
     'dbname' => 'bewamo_test',
     'host' => 'localhost',
 );

@@ -9,7 +9,7 @@
         </id>
 
         <field name="firstName" type="string" />
-        <field name="lastName" type="string" />
+        <field name="lastName" type="string" nullable="true"/>
 
         <many-to-many field="shops" inversed-by="users" target-entity="Kfina\Bewamo\Shop\Entity\Shop">
             <join-table name="users_shops">
