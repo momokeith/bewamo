@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "ubuntu1404", primary: true do |node|
     node.vm.box = "ubuntu/trusty64"
     node.vm.provision "ansible" do |ansible|
-      ansible.playbook = "../ansible/playbooks/vagrant.yml"
+      ansible.playbook = "../ansible/playbooks/vagrant/vagrant.yml"
       ansible.sudo = true
       ansible.inventory_path = "../ansible/inventories"
       ansible.limit = "local"
