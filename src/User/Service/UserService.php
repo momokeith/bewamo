@@ -3,21 +3,21 @@
 namespace Kfina\Bewamo\User\Service;
 
 use Kfina\Bewamo\User\Entity\UserInterface;
-use Kfina\Bewamo\User\Repository\DoctrineRepository;
+use Kfina\Bewamo\User\Repository\RepositoryInterface;
 
 class UserService implements UserServiceInterface
 {
     /**
-     * @var DoctrineRepository
+     * @var RepositoryInterface
      */
     private $userRepository;
 
     /**
      * UserService constructor.
      *
-     * @param DoctrineRepository $userRepository
+     * @param RepositoryInterface $userRepository
      */
-    public function __construct(DoctrineRepository $userRepository)
+    public function __construct(RepositoryInterface $userRepository)
     {
         $this->userRepository = $userRepository;
     }

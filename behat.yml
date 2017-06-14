@@ -1,2 +1,3 @@
 imports:
   - behat.shop.yml
+  - behat.user.yml
